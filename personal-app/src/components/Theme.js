@@ -5,7 +5,7 @@ import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material";
 
 const Theme = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
     document.body.className = theme; // Apply theme to body
