@@ -1,0 +1,40 @@
+
+/* Light Mode */
+.light {
+  background-color: #b7a2ed;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  .links a{
+    color: #000000;
+
+  }
+  .links {
+    background-color: #b7a2ed;
+  }
+  .btn {
+    color: #000000;
+  }
+  .btn:hover{
+    background-color: #b7a2ed !important;
+  }
+  
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #0E061C;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  .btn {
+    color: #ffffff;
+  }
+  .btn:hover{
+    background-color: #0E061C !important;
+  }
+
+}
+
