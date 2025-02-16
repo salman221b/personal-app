@@ -61,6 +61,9 @@ const Projects = () => {
 
                   borderRadius: "10px",
                 }}
+                onClick={() => {
+                  window.open("https://github.com/salman221b/doc-link");
+                }}
               >
                 GitHub Repo
               </button>
@@ -69,6 +72,9 @@ const Projects = () => {
                 style={{
                   backgroundColor: "#7c5ccb",
                   borderRadius: "10px",
+                }}
+                onClick={() => {
+                  window.open("https://doc-link-hco2.onrender.com/");
                 }}
               >
                 Live Demo{" "}
@@ -130,6 +136,9 @@ const Projects = () => {
 
                   borderRadius: "10px",
                 }}
+                onClick={() => {
+                  window.open("https://github.com/salman221b/personal-app");
+                }}
               >
                 GitHub Repo
               </button>
@@ -138,6 +147,9 @@ const Projects = () => {
                 style={{
                   backgroundColor: "#7c5ccb",
                   borderRadius: "10px",
+                }}
+                onClick={() => {
+                  window.open("https://salman-one.vercel.app/");
                 }}
               >
                 Live Demo{" "}

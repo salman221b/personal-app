@@ -126,9 +126,18 @@ const Contact = () => {
           gap: "25%",
         }}
       >
-        <LinkedInIcon />
-        <EmailIcon />
-        <GitHubIcon />{" "}
+        <LinkedInIcon
+          style={{ cursor: "pointer" }}
+          onClick={() => window.open("https://www.linkedin.com/in/salmanep/")}
+        />
+        <EmailIcon
+          style={{ cursor: "pointer" }}
+          onClick={() => window.open("mailto:epsalmaan@gmail.com")}
+        />
+        <GitHubIcon
+          style={{ cursor: "pointer" }}
+          onClick={() => window.open("https://github.com/salman221b")}
+        />{" "}
       </div>
       <p style={{ textAlign: "center", marginTop: "50px" }}>
         © 2025 Salmanul Faris - Crafting scalable web solutions with passion and

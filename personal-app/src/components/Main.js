@@ -3,6 +3,9 @@ import React from "react";
 import animationData from "../assets/Dev.json";
 
 const Main = () => {
+  const handleScroll = () => {
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="body" style={{ padding: "20px" }}>
       <div className="row w-100">
@@ -37,6 +40,7 @@ const Main = () => {
                 backgroundColor: "#7c5ccb",
                 borderRadius: "10px",
               }}
+              onClick={handleScroll}
             >
               Explore My Projects
             </button>

@@ -9,7 +9,10 @@ import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
-    <div className="container-fluid ">
+    <div
+      className="container-fluid"
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+    >
       <header className="App-header">
         <Navbar />
       </header>

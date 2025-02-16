@@ -10,7 +10,14 @@ const About = () => {
           <img
             src={pic}
             alt="My Pic"
-            style={{ borderRadius: "150px", width: "100%" }}
+            style={{
+              borderRadius: "150px",
+              width: "100%",
+              maxWidth: "100%", // Ensures the image never exceeds its container width
+              height: "auto", // Maintains aspect ratio
+              display: "block", // Removes extra spacing below the image
+              objectFit: "cover",
+            }}
           />
         </div>
         <div className="col-12 col-md-6">
