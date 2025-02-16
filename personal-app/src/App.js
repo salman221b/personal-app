@@ -13,10 +13,20 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <Main />
+      <section id="home">
+        <Main />
+      </section>
+
+      <section id="about"></section>
       <About />
-      <Projects />
-      <Contact />
+      <section id="projects">
+        {" "}
+        <Projects />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+
       <ScrollToTop />
     </div>
   );

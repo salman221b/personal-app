@@ -3,6 +3,7 @@ import Theme from "./Theme";
 import logo from "../assets/S_logo.png";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       {/* Logo */}
@@ -10,10 +11,10 @@ const Navbar = () => {
 
       {/* Links */}
       <div className={`links ${menuOpen ? "open" : ""}`}>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Projects</a>
-        <a href="/">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
 
       {/* Wrapper for Hamburger + Theme Toggle */}
