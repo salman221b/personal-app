@@ -1,0 +1,8 @@
+.about-text{
+    line-height: 3;
+}
+@media (max-width: 600px){
+    .about-text{
+        line-height: 1.5;
+    }
+}

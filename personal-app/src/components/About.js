@@ -1,6 +1,7 @@
 import React from "react";
 import pic from "../assets/my_dp.png";
 import Marquee from "./Marquee";
+import "./About.css";
 const About = () => {
   return (
     <div className="about" style={{ padding: "20px" }}>
@@ -22,11 +23,11 @@ const About = () => {
         </div>
         <div className="col-12 col-md-6">
           <p
+            className="about-text"
             style={{
               textAlign: "justify",
               padding: "20px",
               fontSize: "20px",
-              lineHeight: "2",
             }}
           >
             👋 Hi, I'm <b>Salmanul Faris</b> <br />I am a MERN Stack Developer

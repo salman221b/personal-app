@@ -96,7 +96,12 @@ const Projects = () => {
           >
             <h2 style={{ fontWeight: "bold" }}>Personal Portfolio</h2>
             <h3>Project Description: MERN Stack Developer Portfolio</h3>
-            <p style={{ textAlign: "justify", lineHeight: 1.5 }}>
+            <p
+              style={{
+                textAlign: "justify",
+                lineHeight: 1.5,
+              }}
+            >
               &nbsp;&nbsp; This MERN Stack Developer Portfolio is a personal
               website designed to showcase my skills, experience, and projects
               as a full-stack developer. Built using MongoDB, Express.js,
