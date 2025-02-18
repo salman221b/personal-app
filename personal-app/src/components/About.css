@@ -1,5 +1,15 @@
 .about-text{
-    line-height: 3;
+    line-height: 2.5;
+}
+@media (max-width: 992px){
+    .about-text{
+        line-height: 2;
+    }
+}
+@media (max-width: 768px){
+    .about-text{
+        line-height: 1.8;
+    }
 }
 @media (max-width: 600px){
     .about-text{
