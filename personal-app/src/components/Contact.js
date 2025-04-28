@@ -98,6 +98,7 @@ const Contact = () => {
                   label="Name"
                   name="name"
                   id="fullWidth"
+                  required
                   style={{
                     marginTop: "20px",
                     marginBottom: "20px",
@@ -111,6 +112,7 @@ const Contact = () => {
                   label="Email"
                   name="email"
                   id="fullWidth"
+                  required
                   style={{
                     marginTop: "20px",
                     marginBottom: "20px",
@@ -124,6 +126,7 @@ const Contact = () => {
                   label="Query"
                   name="query"
                   id="fullWidth"
+                  required
                   style={{
                     marginTop: "20px",
                     marginBottom: "20px",
