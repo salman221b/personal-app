@@ -31,6 +31,7 @@ const Main = () => {
 
                 borderRadius: "10px",
               }}
+              onClick={() => window.open("/Salmanul_Faris.pdf", "_blank")}
             >
               View My Resume
             </button>

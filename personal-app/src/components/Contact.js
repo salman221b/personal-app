@@ -27,6 +27,14 @@ const Contact = () => {
               padding: "10px 20px",
               border: "none",
             }}
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/Salmanul_Faris.pdf";
+              link.download = "Salmanul_Faris_CV.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           >
             Download Resume
           </button>
