@@ -70,7 +70,7 @@
   .links {
     display: none;
     flex-direction: column;
-    background-color: #0E061C;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
     position: absolute;
     top: 80px;
     left: 0;
