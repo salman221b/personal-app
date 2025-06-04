@@ -1,7 +1,7 @@
 
 /* Light Mode */
 .light {
-background-image: linear-gradient(-225deg, #B6CEE8 0%, #F578DC 100%);
+  background-color: #b7a2ed;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ background-image: linear-gradient(-225deg, #B6CEE8 0%, #F578DC 100%);
 
   }
   .links {
-background-image: linear-gradient(-225deg, #B6CEE8 0%, #ead8eb 100%);
+    background-color: #b7a2ed;
   }
   .btn {
     color: #000000;
@@ -24,7 +24,7 @@ background-image: linear-gradient(-225deg, #B6CEE8 0%, #ead8eb 100%);
 
 /* Dark Mode */
 .dark {
-background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-color: #0E061C;
   color: #ffffff;
   margin: 0;
   padding: 0;
