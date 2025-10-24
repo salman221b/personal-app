@@ -180,7 +180,7 @@ const Contact = () => {
       >
         <LinkedInIcon
           style={{ cursor: "pointer" }}
-          onClick={() => window.open("https://www.linkedin.com/in/salmanep/")}
+          onClick={() => window.open("https://www.linkedin.com/in/salman221b")}
         />
         <EmailIcon
           style={{ cursor: "pointer" }}
