@@ -4,7 +4,73 @@ const Projects = () => {
     <div className="projects" style={{ padding: "20px" }}>
       <h2 style={{ fontWeight: "bold" }}>Projects</h2>
       <div className="row w-100" style={{ marginTop: "20px", padding: "20px" }}>
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-lg-6 col-xl-4">
+          <div
+            style={{
+              padding: "20px",
+              //   backgroundColor: "#7c5ccb",
+              border: "1px solid #7c5ccb",
+              borderRadius: "10px",
+              //   height: "400px",
+              marginBottom: "20px",
+            }}
+          >
+            <h2 style={{ fontWeight: "bold" }}>Yogkalarisamriddhi</h2>
+            <h3>Project Description: Wellness Portal</h3>
+            <p style={{ textAlign: "justify", lineHeight: 1.5 }}>
+              &nbsp;&nbsp; Yogkalarisamriddhi is a wellness portal that channels
+              the synergy of yoga therapy and traditional holistic practices to
+              help users reconnect with their bodies, relieve stress, and
+              nurture overall well-being. Through a clean, intuitive interface
+              powered by React and supported by MERN-stack components, the site
+              offers visitors a seamless, responsive experience that aligns with
+              the brand’s ethos of balance, healing, and growth. The platform’s
+              design reflects calm and clarity, aiming to create a digital space
+              as restful and grounding as the wellness practices it promotes.
+              Yogkalarisamriddhi stands as an example of how modern web
+              technologies can be leveraged to deliver timeless philosophical
+              and healing concepts in a user-friendly, accessible format. 🚀
+            </p>
+            <div
+              className="buttons"
+              style={{
+                marginTop: "20px",
+                gap: "20px",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "row",
+              }}
+            >
+              <button
+                className="btn"
+                style={{
+                  backgroundColor: "#7c5ccb",
+
+                  borderRadius: "10px",
+                }}
+                onClick={() => {
+                  window.open("https://github.com/salman221b/YogKalari");
+                }}
+              >
+                GitHub Repo
+              </button>
+              <button
+                className="btn"
+                style={{
+                  backgroundColor: "#7c5ccb",
+                  borderRadius: "10px",
+                }}
+                onClick={() => {
+                  window.open("https://www.yogkalarisamriddhi.com/#/");
+                }}
+              >
+                Live Demo{" "}
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* ----------------------------------------------------------------------------------------------------------------- */}
+        <div className="col-12 col-lg-6 col-xl-4">
           <div
             style={{
               padding: "20px",
@@ -18,31 +84,19 @@ const Projects = () => {
             <h2 style={{ fontWeight: "bold" }}>Doc Link</h2>
             <h3>Project Description: Telemedicine Platform</h3>
             <p style={{ textAlign: "justify", lineHeight: 1.5 }}>
-              &nbsp;&nbsp; The Telemedicine Platform is a MERN stack-based web
-              application designed to connect patients and doctors seamlessly
-              through digital consultations. The platform offers a user-friendly
-              interface where patients can book appointments, consult doctors
-              online, and access medical records, while doctors can manage
-              appointments, view patient histories, and provide medical advice.
-              For authentication, the system uses a middleware-based auth
-              mechanism, ensuring secure access with role-based permissions for
-              patients, doctors, and admins. The dashboard dynamically adapts,
-              showing relevant features based on the user’s role. Protected
-              routes ensure that only authorized users can access sensitive
-              areas like medical records and consultations. The landing page
-              welcomes first-time visitors and unregistered users, offering an
-              engaging preview of the platform’s features. The appointment
-              management system enables patients to schedule consultations as
-              in-person, video, or tele-consultations, with doctors having the
-              ability to approve, reschedule, or cancel them. A calendar
-              integration provides an intuitive way to track appointments.
-              Additional features include secure medical record storage,
-              prescription generation, and real-time notifications. The system
-              is optimized for performance, accessibility, and mobile
-              responsiveness, ensuring smooth user experience across devices.
-              This project aims to revolutionize remote healthcare services,
-              enhancing accessibility and efficiency for both patients and
-              doctors. 🚀
+              &nbsp;&nbsp; The Telemedicine Platform is a MERN-stack web
+              application built to streamline digital healthcare by connecting
+              patients and doctors through secure, role-based online
+              consultations. With a clean, intuitive interface, users can book
+              appointments, consult doctors via video or in-person options,
+              access medical records, and receive real-time updates, while
+              doctors can manage schedules, review patient histories, and share
+              prescriptions. Protected routes and middleware-based
+              authentication ensure data privacy, and a dynamic dashboard adapts
+              features based on each user’s role. Designed for performance and
+              accessibility across devices, the platform delivers a seamless
+              experience that modernizes remote healthcare and enhances
+              efficiency for both patients and medical professionals. 🚀
             </p>
             <div
               className="buttons"
@@ -83,7 +137,7 @@ const Projects = () => {
           </div>
         </div>
         {/* ----------------------------------------------------------------------------------------------------------------- */}
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-lg-6 col-xl-4">
           <div
             style={{
               padding: "20px",
@@ -102,27 +156,20 @@ const Projects = () => {
                 lineHeight: 1.5,
               }}
             >
-              &nbsp;&nbsp; This MERN Stack Developer Portfolio is a personal
-              website designed to showcase my skills, experience, and projects
-              as a full-stack developer. Built using MongoDB, Express.js,
-              React.js, and Node.js (MERN), this website serves as a
-              professional platform for recruiters, developers, and co-workers
-              to explore my technical expertise and past work. The website
-              features a modern and responsive UI, ensuring seamless navigation
-              across devices. The homepage introduces my professional
-              background, skills, and achievements. The Projects section
-              highlights real-world applications I have built, detailing their
-              features, tech stacks, and GitHub links. The About Me section
-              provides insights into my journey as a developer, including my
-              experience at Infosys since March 7, 2022. To enhance user
-              experience, I have integrated dark/light mode toggling,
-              interactive animations using Lottie, and optimized images for
-              faster load times. The site also includes a contact form for easy
-              communication. Bootstrap is used for styling, ensuring a
-              professional look across screen sizes. This portfolio is not just
-              a resume but a living project, continuously updated with my latest
-              work and skills, helping me connect with potential employers and
-              fellow developers. 🚀
+              &nbsp;&nbsp; This MERN Stack Developer Portfolio is a modern
+              platform crafted to showcase my skills, experience, and full-stack
+              projects through a clean, responsive interface built with MongoDB,
+              Express.js, React, and Node.js. Designed for recruiters and
+              developers, it offers a seamless way to explore my technical
+              expertise, real-world applications, and professional journey,
+              including my ongoing experience at Infosys. The site reflects
+              clarity and professionalism, featuring project highlights with
+              tech stacks and GitHub links, an About Me section that shares my
+              growth as a developer, and a contact form for effortless
+              communication. Enhanced with dark/light mode, Lottie animations,
+              and optimized performance, the portfolio represents a living,
+              evolving space—continually updated to mirror my progress and
+              connect me with opportunities across the developer community. 🚀
             </p>
             <div
               className="buttons"
