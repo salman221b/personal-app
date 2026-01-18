@@ -1,108 +1,148 @@
+/* App Container */
+.container-fluid {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  color: var(--text-primary);
+  transition: background-color 0.3s ease;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 20px;
-  /* background-color: #121212; */
-  color: white;
+  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 /* Logo */
 .logo {
-  width: 100px;
-  height: 100px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  background: var(--accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Links */
 .links {
   display: flex;
-  gap: 15px;
+  gap: 2rem;
+  align-items: center;
 }
 
 .links a {
-  color: white;
+  color: var(--text-primary);
   text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
   transition: color 0.3s;
 }
 
-.links a:hover {
-  color: #7c5ccb;
+.links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--accent-gradient);
+  transition: width 0.3s ease;
 }
 
-/* Wrapper for Hamburger and Theme Toggle */
+.links a:hover {
+  color: var(--accent);
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+/* Icons Wrapper */
 .menu-icons {
   display: flex;
   align-items: center;
-  gap: 15px; /* Space between hamburger and theme toggle */
+  gap: 1rem;
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
   display: none;
-  font-size: 30px;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: var(--text-primary);
 }
+
+/* Sections */
+section {
+  padding: 80px 20px 40px;
+  /* Top padding covers fixed navbar */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titles */
 .title {
-  font-size: 45px;
-  font-weight: bold;
-  padding: 10px;
-  margin-top: 50px;
-}
-.lottie {
-  margin-top: -70px;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-primary);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
- 
+  .navbar {
+    padding: 1rem;
+  }
+
   .hamburger {
     display: block;
   }
 
   .links {
-    display: none;
-    flex-direction: column;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
     position: absolute;
-    top: 80px;
+    top: 100%;
     left: 0;
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    /* Fallback */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease;
+    gap: 0;
+    padding: 0;
   }
 
+  /* When open */
   .links.open {
-    display: flex;
+    max-height: 300px;
+    /* Adjust based on content */
+    padding: 1rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
   .links a {
-    padding: 10px;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
     display: block;
   }
-  .title {
-    font-size: 30px; 
-    text-align: center; 
-  }
-  .lottie {
-    margin-top: 0px;
-    
-  }
 }
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 24px; 
-  }
-}
-html {
-  scroll-behavior: smooth;
-}
-

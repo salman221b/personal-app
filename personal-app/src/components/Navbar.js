@@ -5,16 +5,16 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar glass">
       {/* Logo */}
-      <img src={logo} alt="Logo" className="logo" />
+      <h1 className="logo">Salman</h1>
 
       {/* Links */}
       <div className={`links ${menuOpen ? "open" : ""}`}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+        <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </div>
 
       {/* Wrapper for Hamburger + Theme Toggle */}

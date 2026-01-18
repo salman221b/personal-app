@@ -7,54 +7,38 @@ const Main = () => {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="body" style={{ padding: "20px" }}>
-      <div className="row w-100">
-        <div className="col-12 col-md-6 ">
-          <h1 className=" title">
-            "Building scalable web applications with MERN Stack. Passionate
-            about clean code and seamless user experiences." 🚀
+    <div className="container" style={{ minHeight: "80vh", display: "flex", alignItems: "center" }}>
+      <div className="row w-100 align-items-center reverse-column-sm">
+        <div className="col-12 col-md-6 text-center text-md-start">
+          <h1 className="title text-start mb-4" style={{ fontSize: "3rem", lineHeight: "1.2" }}>
+            Building scalable web applications with <span style={{ color: "var(--accent)" }}>MERN Stack</span>.
           </h1>
-          <div
-            className="buttons"
-            style={{
-              marginTop: "20px",
-              gap: "20px",
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "row",
-            }}
-          >
+          <p className="mb-4" style={{ fontSize: "1.2rem", color: "var(--text-secondary)" }}>
+            Passionate about clean code and seamless user experiences.
+          </p>
+          <div className="d-flex gap-3 justify-content-center justify-content-md-start">
             <button
-              className="btn"
-              style={{
-                backgroundColor: "#7c5ccb",
-
-                borderRadius: "10px",
-              }}
-              onClick={() => window.open("/Salmanul_Faris.pdf", "_blank")}
-            >
-              View My Resume
-            </button>
-            <button
-              className="btn"
-              style={{
-                backgroundColor: "#7c5ccb",
-                borderRadius: "10px",
-              }}
+              className="btn-primary"
               onClick={handleScroll}
             >
               Explore My Projects
             </button>
+            <button
+              className="btn-secondary"
+              onClick={() => window.open("/Salmanul_Faris.pdf", "_blank")}
+            >
+              View My Resume
+            </button>
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
-          <Lottie
-            className="lottie"
-            animationData={animationData}
-            style={{ width: 500, height: 400 }}
-            loop={true} // Ensures infinite looping
-            autoplay={true} // Automatically starts animation
-          />
+          <div style={{ maxWidth: "500px", width: "100%" }}>
+            <Lottie
+              animationData={animationData}
+              loop={true}
+              autoplay={true}
+            />
+          </div>
         </div>
       </div>
     </div>

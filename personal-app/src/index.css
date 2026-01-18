@@ -1,40 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Global Variables */
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+
+  /* Light Mode Palette */
+  --bg-primary-light: #f8fafc;
+  --bg-secondary-light: #ffffff;
+  --text-primary-light: #1e293b;
+  --text-secondary-light: #64748b;
+  --accent-light: #6366f1;
+  --accent-gradient-light: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --shadow-light: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* Dark Mode Palette */
+  --bg-primary-dark: #0f172a;
+  --bg-secondary-dark: #1e293b;
+  --text-primary-dark: #f8fafc;
+  --text-secondary-dark: #94a3b8;
+  --accent-dark: #818cf8;
+  --accent-gradient-dark: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  --shadow-dark: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 /* Light Mode */
 .light {
-  background-color: #b7a2ed;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  .links a{
-    color: #000000;
+  background-color: var(--bg-primary-light);
+  color: var(--text-primary-light);
 
-  }
-  .links {
-    background-color: #b7a2ed;
-  }
-  .btn {
-    color: #000000;
-  }
-  .btn:hover{
-    background-color: #b7a2ed !important;
-  }
-  
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --accent: var(--accent-light);
+  --accent-gradient: var(--accent-gradient-light);
+  --shadow: var(--shadow-light);
 }
 
 /* Dark Mode */
 .dark {
-  background-color: #0E061C;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  .btn {
-    color: #ffffff;
-  }
-  .btn:hover{
-    background-color: #0E061C !important;
-  }
+  background-color: var(--bg-primary-dark);
+  color: var(--text-primary-dark);
 
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent: var(--accent-dark);
+  --accent-gradient: var(--accent-gradient-dark);
+  --shadow: var(--shadow-dark);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+}
+
+/* Utility for glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.light .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Helper Class for Buttons */
+.btn-primary {
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+  background: var(--accent-gradient) !important;
+  /* Override current important if necessary */
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}

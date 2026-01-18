@@ -9,6 +9,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
@@ -41,25 +42,19 @@ const Contact = () => {
     e.target.reset(); // To clear the form after submit
   };
   return (
-    <div className="contact" style={{ padding: "20px" }}>
-      <h2 style={{ fontWeight: "bold" }}>Contact</h2>
-      <div className="row w-100">
-        <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
-          <Lottie
-            className="lottie"
-            animationData={animationData}
-            style={{ width: 500, height: 400 }}
-            loop={true}
-            autoplay={true}
-          />
+    <div className="container py-5" id="contact">
+      <h2 className="title text-start mb-5">Contact</h2>
+      <div className="row align-items-center reverse-column-sm">
+        <div className="col-12 col-md-6 mb-4 mb-md-0 d-flex flex-column align-items-center">
+          <div style={{ maxWidth: "500px", width: "100%" }}>
+            <Lottie
+              animationData={animationData}
+              loop={true}
+              autoplay={true}
+            />
+          </div>
           <button
-            className="btn mt-3"
-            style={{
-              backgroundColor: "#7c5ccb",
-              borderRadius: "10px",
-              padding: "10px 20px",
-              border: "none",
-            }}
+            className="btn-primary mt-4"
             onClick={() => {
               const link = document.createElement("a");
               link.href = "/Salmanul_Faris.pdf";
@@ -72,128 +67,88 @@ const Contact = () => {
             Download Resume
           </button>
         </div>
-        {/* ------------------------------------------------------------------------------------------------- */}
-        <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
-          <form ref={form} onSubmit={sendEmail}>
-            <div
-              style={{
-                padding: "20px",
-                //   backgroundColor: "#7c5ccb",
-                border: "1px solid #7c5ccb",
-                borderRadius: "10px",
-                //   height: "400px",
-                marginBottom: "20px",
-                marginTop: "20px",
-              }}
-            >
-              <h2 style={{ fontWeight: "bold" }}>Contact Form</h2>
-              <Box
-                sx={{
-                  width: "100%",
-                  maxWidth: "100%",
-                }}
-              >
+
+        <div className="col-12 col-md-6">
+          <div className="glass p-4 p-md-5 rounded-4 contact-form-container">
+            <h3 className="h4 font-weight-bold mb-4" style={{ color: "var(--text-primary)" }}>Send a Message</h3>
+            <form ref={form} onSubmit={sendEmail}>
+              <Box sx={{ width: "100%" }}>
                 <TextField
                   fullWidth
                   label="Name"
                   name="name"
-                  id="fullWidth"
+                  variant="filled"
                   required
-                  style={{
-                    marginTop: "20px",
-                    marginBottom: "20px",
-                    backgroundColor: "white",
-
-                    borderRadius: "10px",
+                  sx={{
+                    mb: 3,
+                    backgroundColor: "rgba(255,255,255,0.8)",
+                    borderRadius: 1,
+                    "& .MuiInputBase-root": { backgroundColor: "transparent" }
                   }}
                 />
                 <TextField
                   fullWidth
                   label="Email"
                   name="email"
-                  id="fullWidth"
+                  type="email"
+                  variant="filled"
                   required
-                  style={{
-                    marginTop: "20px",
-                    marginBottom: "20px",
-                    backgroundColor: "white",
-
-                    borderRadius: "10px",
+                  sx={{
+                    mb: 3,
+                    backgroundColor: "rgba(255,255,255,0.8)",
+                    borderRadius: 1
                   }}
                 />
                 <TextField
                   fullWidth
                   label="Query"
                   name="query"
-                  id="fullWidth"
+                  multiline
+                  rows={4}
+                  variant="filled"
                   required
-                  style={{
-                    marginTop: "20px",
-                    marginBottom: "20px",
-                    backgroundColor: "white",
-
-                    borderRadius: "10px",
+                  sx={{
+                    mb: 3,
+                    backgroundColor: "rgba(255,255,255,0.8)",
+                    borderRadius: 1
                   }}
                 />
               </Box>
 
-              <div
-                className="buttons"
-                style={{
-                  marginTop: "20px",
-                  gap: "20px",
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "row",
-                }}
-              >
+              <div className="d-flex justify-content-start">
                 <button
                   type="submit"
-                  className="btn"
-                  style={{
-                    backgroundColor: "#7c5ccb",
-                    borderRadius: "10px",
-                  }}
+                  className="btn-primary"
+                  disabled={loading}
+                  style={{ minWidth: "150px" }}
                 >
-                  {loading ? "Sending..." : "Send Your Query"}
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-      {/* Toast Container to show toasts */}
-      <ToastContainer position="top-center" />
 
-      {/* -----------------------------------------------------------------------------
-      ----------------------------------------------- */}
-      <div
-        style={{
-          padding: "20px",
-          marginTop: "50px",
-          marginBottom: "20px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "25%",
-        }}
-      >
+      <ToastContainer position="top-center" theme="colored" />
+
+      <div className="mt-5 pt-5 d-flex justify-content-center gap-5">
         <LinkedInIcon
-          style={{ cursor: "pointer" }}
+          sx={{ fontSize: 40, cursor: "pointer", color: "var(--text-secondary)", "&:hover": { color: "var(--accent)" }, transition: "color 0.3s" }}
           onClick={() => window.open("https://www.linkedin.com/in/salman221b")}
         />
         <EmailIcon
-          style={{ cursor: "pointer" }}
+          sx={{ fontSize: 40, cursor: "pointer", color: "var(--text-secondary)", "&:hover": { color: "var(--accent)" }, transition: "color 0.3s" }}
           onClick={() => window.open("mailto:epsalmaan@gmail.com")}
         />
         <GitHubIcon
-          style={{ cursor: "pointer" }}
+          sx={{ fontSize: 40, cursor: "pointer", color: "var(--text-secondary)", "&:hover": { color: "var(--accent)" }, transition: "color 0.3s" }}
           onClick={() => window.open("https://github.com/salman221b")}
-        />{" "}
+        />
       </div>
-      <p style={{ textAlign: "center", marginTop: "50px" }}>
-        © 2025 Salmanul Faris - Crafting scalable web solutions with passion and
-        precision.
+
+      <p className="text-center mt-4" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
+        © 2025 Salmanul Faris - Crafting scalable web solutions.
       </p>
     </div>
   );
