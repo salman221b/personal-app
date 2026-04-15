@@ -23,7 +23,7 @@ const Contact = () => {
         "service_xq04glg",
         "template_hubwkun",
         form.current,
-        "XgiLvulQ_qgPGI3Pt"
+        "XgiLvulQ_qgPGI3Pt",
       )
       .then(
         (result) => {
@@ -36,7 +36,7 @@ const Contact = () => {
           console.log(error.text);
           toast.error("Failed to send message. Please try again! ❌");
           setLoading(false);
-        }
+        },
       );
 
     e.target.reset(); // To clear the form after submit
@@ -47,11 +47,7 @@ const Contact = () => {
       <div className="row align-items-center reverse-column-sm">
         <div className="col-12 col-md-6 mb-4 mb-md-0 d-flex flex-column align-items-center">
           <div style={{ maxWidth: "500px", width: "100%" }}>
-            <Lottie
-              animationData={animationData}
-              loop={true}
-              autoplay={true}
-            />
+            <Lottie animationData={animationData} loop={true} autoplay={true} />
           </div>
           <button
             className="btn-primary mt-4"
@@ -70,7 +66,12 @@ const Contact = () => {
 
         <div className="col-12 col-md-6">
           <div className="glass p-4 p-md-5 rounded-4 contact-form-container">
-            <h3 className="h4 font-weight-bold mb-4" style={{ color: "var(--text-primary)" }}>Send a Message</h3>
+            <h3
+              className="h4 font-weight-bold mb-4"
+              style={{ color: "var(--text-primary)" }}
+            >
+              Send a Message
+            </h3>
             <form ref={form} onSubmit={sendEmail}>
               <Box sx={{ width: "100%" }}>
                 <TextField
@@ -83,7 +84,7 @@ const Contact = () => {
                     mb: 3,
                     backgroundColor: "rgba(255,255,255,0.8)",
                     borderRadius: 1,
-                    "& .MuiInputBase-root": { backgroundColor: "transparent" }
+                    "& .MuiInputBase-root": { backgroundColor: "transparent" },
                   }}
                 />
                 <TextField
@@ -96,7 +97,7 @@ const Contact = () => {
                   sx={{
                     mb: 3,
                     backgroundColor: "rgba(255,255,255,0.8)",
-                    borderRadius: 1
+                    borderRadius: 1,
                   }}
                 />
                 <TextField
@@ -110,7 +111,7 @@ const Contact = () => {
                   sx={{
                     mb: 3,
                     backgroundColor: "rgba(255,255,255,0.8)",
-                    borderRadius: 1
+                    borderRadius: 1,
                   }}
                 />
               </Box>
@@ -134,21 +135,42 @@ const Contact = () => {
 
       <div className="mt-5 pt-5 d-flex justify-content-center gap-5">
         <LinkedInIcon
-          sx={{ fontSize: 40, cursor: "pointer", color: "var(--text-secondary)", "&:hover": { color: "var(--accent)" }, transition: "color 0.3s" }}
+          sx={{
+            fontSize: 40,
+            cursor: "pointer",
+            color: "var(--text-secondary)",
+            "&:hover": { color: "var(--accent)" },
+            transition: "color 0.3s",
+          }}
           onClick={() => window.open("https://www.linkedin.com/in/salman221b")}
         />
         <EmailIcon
-          sx={{ fontSize: 40, cursor: "pointer", color: "var(--text-secondary)", "&:hover": { color: "var(--accent)" }, transition: "color 0.3s" }}
+          sx={{
+            fontSize: 40,
+            cursor: "pointer",
+            color: "var(--text-secondary)",
+            "&:hover": { color: "var(--accent)" },
+            transition: "color 0.3s",
+          }}
           onClick={() => window.open("mailto:epsalmaan@gmail.com")}
         />
         <GitHubIcon
-          sx={{ fontSize: 40, cursor: "pointer", color: "var(--text-secondary)", "&:hover": { color: "var(--accent)" }, transition: "color 0.3s" }}
+          sx={{
+            fontSize: 40,
+            cursor: "pointer",
+            color: "var(--text-secondary)",
+            "&:hover": { color: "var(--accent)" },
+            transition: "color 0.3s",
+          }}
           onClick={() => window.open("https://github.com/salman221b")}
         />
       </div>
 
-      <p className="text-center mt-4" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
-        © 2025 Salmanul Faris - Crafting scalable web solutions.
+      <p
+        className="text-center mt-4"
+        style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}
+      >
+        © 2026 Salmanul Faris - Crafting scalable web solutions.
       </p>
     </div>
   );
