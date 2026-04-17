@@ -170,7 +170,7 @@ const Contact = () => {
         className="text-center mt-4"
         style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}
       >
-        © 2026 Salmanul Faris - Crafting scalable web solutions.
+        © 2026 Salmanul Faris - Crafting scalable web solutions
       </p>
     </div>
   );
